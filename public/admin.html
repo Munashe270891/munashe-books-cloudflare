@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Admin - Upload Book</title>
+<style>
+body { font-family: Inter, sans-serif; max-width: 600px; margin: 40px auto; padding: 20px; }
+input, textarea, button { width: 100%; margin: 10px 0; padding: 10px; }
+</style>
+</head>
+<body>
+<h2>Upload Book</h2>
+<form action="/admin/upload?key=@dmin3778-books" method="post" enctype="multipart/form-data">
+  <input name="title" placeholder="Book Title" required>
+  <textarea name="description" placeholder="Description"></textarea>
+  <input type="file" name="pdf" accept=".pdf" required>
+  <label><input type="checkbox" name="is_free"> Free book</label>
+  <input name="price" type="number" step="0.01" placeholder="Price USD">
+  <input name="image_url" placeholder="Cover Image URL">
+  <button type="submit">Upload</button>
+</form>
+</body>
+    </html>
